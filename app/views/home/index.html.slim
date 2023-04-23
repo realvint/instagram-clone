@@ -1,2 +1,18 @@
-h1 Hello, world
-span.fa.fa-cat
+.d-flex.justify-content-center.align-items-center.vh-100
+  .d-block
+    .card.mb-3 style='width: 24rem;'
+      .card-body.my-3
+        .text-center.mb-3
+          = image_tag('instagram-text-img.png', class: 'instagram-logo-link')
+        p.text-center.text-secondary.fs-5.fw-semibold Sign up to see photos and videos from your friends.
+
+        input.form-control.mb-3 placeholder='Email or phone number'
+        input.form-control.mb-3 placeholder='Username'
+        input.form-control.mb-3 placeholder='Password'
+        button.btn.btn-secondary.w-100 Sign up
+
+    .card.mb-5 style='width: 24rem;'
+      .card-body.my-2
+        .text-center
+          | Have an account?
+          =< link_to 'Log in', '#'
