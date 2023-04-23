@@ -17,6 +17,7 @@ gem 'jsbundling-rails'
 gem 'jbuilder'
 gem 'redis', '~> 4.0'
 gem 'sassc-rails'
+gem 'slim-rails', '~> 3.6.1'
 gem 'stimulus-rails'
 
 group :development, :test do
