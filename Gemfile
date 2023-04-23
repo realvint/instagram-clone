@@ -14,6 +14,8 @@ gem 'turbo-rails'
 gem 'cssbundling-rails'
 gem 'jsbundling-rails'
 
+gem 'devise', github: 'heartcombo/devise', branch: 'main'
+gem 'devise-i18n', '~> 1.10.3'
 gem 'jbuilder'
 gem 'redis', '~> 4.0'
 gem 'sassc-rails'

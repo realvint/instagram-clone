@@ -9,6 +9,7 @@ html
 
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = favicon_link_tag asset_path('logo.svg')
 
     link rel='preconnect' href='https://fonts.googleapis.com'
     link rel='preconnect' href='https://fonts.gstatic.com'
@@ -16,4 +17,9 @@ html
 
   body
     #main-container.container-fluid
+      - if notice.present?
+        p.notice = notice
+      - if alert.present?
+        p.alert = alert
+
       = yield
