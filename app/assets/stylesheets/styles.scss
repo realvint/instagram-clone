@@ -1,4 +1,36 @@
+a {
+  text-decoration: none;
+}
+
 .instagram-logo-link {
   width: 16rem;
   height: auto;
 }
+
+.form-control {
+  background-color: #fafafa;
+  border-radius: 3px;
+
+  &:focus {
+    background-color: #fafafa;
+    border-color: #6c757d;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn-blue {
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #3E8EF7;
+  --bs-btn-border-color: #3E8EF7;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #3878ea;
+  --bs-btn-hover-border-color:#3878ea;
+  --bs-btn-active-color: var(--bs-white);
+  --bs-btn-active-bg: #3878ea;
+  --bs-btn-active-border-color: #3878ea;
+}
+
