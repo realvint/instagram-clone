@@ -1,0 +1,34 @@
+.d-flex.justify-content-center.align-items-center.vh-100
+  .d-block
+    .card.mb-3 style='width: 24rem;'
+      .card-body.my-3
+        .text-center.mb-3
+          = image_tag('instagram-text-img.png', class: 'instagram-logo-link')
+        p.text-center.text-secondary.fs-5.fw-semibold Sign up to see photos and videos from your friends.
+
+        button.btn.btn-blue.w-100.mb-3
+          i.fa-brands.fa-github.pe-2
+          | Log in with Github
+
+        .row.mb-3
+          .col
+            hr
+          .col-auto.pt-1
+            | OR
+          .col
+            hr
+
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          /= render 'devise/shared/error_messages', resource: resource
+
+          = f.text_field :email, class: 'form-control mb-3', placeholder: 'Email'
+          input.form-control.mb-3 placeholder='Username'
+          = f.password_field :password, autocomplete: 'new-password', class: 'form-control mb-3', placeholder: 'Password'
+          = f.submit 'Sign up', class: 'btn btn-blue w-100'
+
+    - if controller_name != 'sessions'
+      .card.mb-5 style='width: 24rem;'
+        .card-body.my-2
+          .text-center
+            | Have an account?
+            =< link_to 'Log in', new_session_path(resource_name)
