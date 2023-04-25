@@ -1,0 +1,19 @@
+- if flash.any?
+  - flash.each do |type, msg|
+    - if type == 'alert'
+      = content_tag :div, msg, id: 'alert-flash',
+        class: 'alert  alert-danger fade show align-items-center position-fixed top-0 end-0 mt-4 me-3',
+        role: :alert,
+        data: { controller: 'autohide' } do
+        .justify-content-around
+          = msg
+          button.btn-close.ms-2 type='button' data-bs-dismiss='alert' aria-label='Close' data-autohide-target='close'
+
+    - else
+      = content_tag :div, msg, id: 'notice-flash',
+        class: 'alert alert-success alert-dismissible fade show align-items-center position-fixed top-0 end-0 mt-4 me-3',
+        role: :alert,
+        data: { controller: 'autohide' } do
+        .justify-content-around
+          = msg
+          button.btn-close.ms-2 type='button' data-bs-dismiss='alert' aria-label='Close' data-autohide-target='close'

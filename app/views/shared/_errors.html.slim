@@ -1,0 +1,10 @@
+- if resource.present? && resource.errors.any?
+  - resource.errors.each do |error|
+    = content_tag :div, id: 'alert-flash',
+      class: 'alert  alert-danger fade show align-items-center position-fixed top-0 end-0 mt-4 me-3',
+      role: 'alert',
+      data: { controller: 'autohide', resource_id: resource.id } do
+      .justify-content-around
+        - resource.errors.each do |error|
+          | #{error.full_message}#{". "}
+        button.btn-close.ms-2 type='button' data-bs-dismiss='alert' aria-label='Close' data-autohide-target='close'

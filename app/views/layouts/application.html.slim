@@ -17,9 +17,7 @@ html
 
   body
     #main-container.container-fluid
-      - if notice.present?
-        p.notice = notice
-      - if alert.present?
-        p.alert = alert
+      #flash
+        = render 'shared/flash'
 
       = yield
