@@ -1,6 +1,6 @@
 .d-flex.justify-content-center.align-items-center.vh-100
-  .d-block
-    .card.mb-3 style='width: 24rem;'
+  .d-block.devise-form
+    .card.mb-3
       .card-body.my-3
         .text-center.mb-3
           = image_tag('instagram-text-img.png', class: 'instagram-logo-link')
@@ -27,7 +27,7 @@
           = f.submit 'Sign up', class: 'btn btn-blue w-100'
 
     - if controller_name != 'sessions'
-      .card.mb-5 style='width: 24rem;'
+      .card.mb-5
         .card-body.my-2
           .text-center
             | Have an account?

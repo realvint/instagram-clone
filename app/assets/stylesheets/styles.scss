@@ -34,3 +34,16 @@ a {
   --bs-btn-active-border-color: #3878ea;
 }
 
+.devise-form {
+  margin: 5% auto auto;
+  width: 24rem;
+}
+
+@media (max-width: 25rem) {
+  .devise-form {
+    margin: 5% auto auto;
+    width: 100%;
+  }
+}
+
+

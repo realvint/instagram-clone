@@ -1,6 +1,6 @@
 .d-flex.justify-content-center.align-items-center.vh-100
-  .d-block
-    .card.mb-3 style='width: 24rem;'
+  .d-block.devise-form
+    .card.mb-3
       .card-body.mb-3.mt-2
         .text-center.mb-3
           = image_tag('instagram-text-img.png', class: 'instagram-logo-link')
@@ -32,7 +32,7 @@
             | Log in with Github
 
     - if devise_mapping.registerable? && controller_name != 'registrations'
-      .card.mb-5 style='width: 24rem;'
+      .card.mb-5
         .card-body.my-2
           .text-center
             | Don't have an account?
